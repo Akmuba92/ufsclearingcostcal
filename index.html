@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UFS Clearance Cost Breakdown</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>UFS Clearance Cost Breakdown</h1>
+        <form id="calculator-form">
+            <label for="length">Vehicle Length (in meters):</label>
+            <input type="number" step="0.01" id="length" placeholder="Enter vehicle length" required>
+
+            <label for="shipping-line">Select Shipping Line/Agent:</label>
+            <select id="shipping-line" required>
+                <option value="MOL">MOL</option>
+                <option value="HOEGH">HOEGH</option>
+                <option value="NYK">NYK</option>
+                <option value="BEFOREWARD">BEFOREWARD</option>
+                <option value="OTHER">OTHER</option>
+            </select>
+
+            <button type="button" onclick="calculateCost()">Calculate Cost</button>
+        </form>
+
+        <div id="cost-breakdown">
+            <h2>Cost Breakdown:</h2>
+            <p>Cargo Dues: ZAR <span id="cargo-dues"></span></p>
+            <p>D.O Charges: ZAR <span id="do-charges"></span></p>
+            <p>Landing Fee: ZAR <span id="landing-fee"></span></p>
+            <p>Transport Cost: ZAR <span id="transport-cost"></span></p>
+            <p>Other Costs: ZAR <span id="other-costs"></span></p>
+            <h2>Total Internal Cost: ZAR <span id="total-cost"></span></h2>
+            <h2>Customer Clearance Charge: ZAR <span id="clearance-charge"></span></h2>
+        </div>
+
+        <div id="disclaimer">
+            <p><strong>Note:</strong> This calculator is only for the understanding of the potential charges. The final price may change based on many factors. Please contact our team on WhatsApp at +27 60 500 3357 or via email at logistics@ufsauto.com.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
